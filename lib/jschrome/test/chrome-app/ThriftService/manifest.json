@@ -5,6 +5,7 @@
      "app": {
           "background": {
                "scripts": [
+                    "async.js",
                     "thrift-chrome-transport.js",
                     "background.js"
      	    ]
@@ -16,7 +17,7 @@
      },
      "permissions": [
           "idle",
-          {"socket" : ["tcp-connect", "tcp-listen"]}
+          {"socket" : ["tcp-connect:*:*", "tcp-listen"]}
           
      ],
      "manifest_version": 2
