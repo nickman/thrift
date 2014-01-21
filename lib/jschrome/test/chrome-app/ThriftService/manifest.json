@@ -5,6 +5,7 @@
      "app": {
           "background": {
                "scripts": [
+                    "jquery-2.0.3.js",
                     "async.js",
                     "thrift-chrome-transport.js",
                     "background.js"
@@ -17,7 +18,7 @@
      },
      "permissions": [
           "idle",
-          {"socket" : ["tcp-connect:*:*", "tcp-listen"]}
+          {"socket" : ["tcp-connect:*:*", "udp-bind", "udp-send-to"]}
           
      ],
      "manifest_version": 2
