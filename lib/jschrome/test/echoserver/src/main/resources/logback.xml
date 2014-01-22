@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <jmxConfigurator/>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>
+        %d{ISO8601} %-5level [%thread] %logger{0}: %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <logger name="org.apache.thrift.jschrome.echo" level="${echo-level:-INFO}"/>
+  <logger name="org.jboss.netty" level="${netty-level:-DEBUG}"/>
+  
+  <logger name="UDP" level="${udp-level:-INFO}"/>
+  <logger name="TCP" level="${tcp-level:-INFO}"/>
+  <root level="${root-level:-INFO}">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
