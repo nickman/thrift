@@ -129,6 +129,21 @@
 		</plugins>
 	</build>
 	<dependencies>
+		<!--
+			
+			Add these back in for a native thrift echo
+			 
+		<dependency>
+		    <groupId>com.cgbystrom</groupId>
+		    <artifactId>netty-tools</artifactId>
+		    <version>1.2.7</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.thrift</groupId>
+		  <artifactId>libthrift</artifactId>
+		  <version>0.9.1</version>
+		</dependency>
+		-->
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty</artifactId>

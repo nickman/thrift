@@ -93,7 +93,7 @@ public class EchoServer {
 		// Set up the pipeline factory.
 		bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
 			public ChannelPipeline getPipeline() throws Exception {
-				return Channels.pipeline(new LoggingHandler("TCP", hexMode), tcpHandler);
+				return Channels.pipeline(new LoggingHandler("TCP", InternalLogLevel.INFO, hexMode), tcpHandler);
 			}
 		});
 
@@ -108,7 +108,7 @@ public class EchoServer {
 				);
 		cboot.setPipelineFactory(new ChannelPipelineFactory() {
 			public ChannelPipeline getPipeline() throws Exception {
-				return Channels.pipeline(new LoggingHandler("UDP", hexMode), udpHandler);
+				return Channels.pipeline(new LoggingHandler("UDP", InternalLogLevel.INFO, hexMode), udpHandler);
 			}
 		});
 		InetSocketAddress uisa = new InetSocketAddress("0.0.0.0", udpPort);
