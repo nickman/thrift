@@ -9,6 +9,7 @@
                     "async.js",
                     "thrift-chrome-transport.js",
                     "chrome-socket-api-errors.js",
+                    "thrift-chrome-protocol.js",
                     "background.js"
      	    ]
 	    }
