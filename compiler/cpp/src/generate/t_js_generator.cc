@@ -60,8 +60,14 @@ class t_js_generator : public t_oop_generator {
      iter = parsed_options.find("jquery");
      gen_jquery_ = (iter != parsed_options.end());
 
+     iter = parsed_options.find("jschrome");
+     gen_jschrome_ = (iter != parsed_options.end());
+
+
      if (gen_node_) {
        out_dir_base_ = "gen-nodejs";
+     } if (gen_jschrome_) {
+      out_dir_base_ = "gen-jschrome";
      } else {
        out_dir_base_ = "gen-js";
      }
@@ -242,6 +248,12 @@ class t_js_generator : public t_oop_generator {
    * True if we should generate services that use jQuery ajax (async/sync).
    */
   bool gen_jquery_;
+
+  /**
+   * True if we should generate services that use the Chrome Apps Socket API.
+   */
+  bool gen_jschrome_;
+
 
   /**
    * File streams
