@@ -132,7 +132,7 @@
 		<!--
 			
 			Add these back in for a native thrift echo
-			 
+			 cd
 		<dependency>
 		    <groupId>com.cgbystrom</groupId>
 		    <artifactId>netty-tools</artifactId>

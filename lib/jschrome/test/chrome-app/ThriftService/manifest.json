@@ -7,11 +7,11 @@
                "scripts": [
                     "jquery-2.0.3.js",
                     "async.js",
-                    "dynamic-buffer.js",
                     "thrift-chrome-transport.js",
                     "chrome-socket-api-errors.js",
                     "thrift-chrome-protocol.js",
-                    "background.js"
+                    "background.js",
+                    "tests.js"
      	    ]
 	    }
      },
