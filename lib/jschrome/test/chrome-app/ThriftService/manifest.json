@@ -10,6 +10,9 @@
                     "thrift-chrome-transport.js",
                     "chrome-socket-api-errors.js",
                     "thrift-chrome-protocol.js",
+                    "thrift.js",
+                    "Hbase_types.js",
+                    "Hbase.js",
                     "background.js",
                     "tests.js"
      	    ]
@@ -19,6 +22,9 @@
           "128": "/img/ts_128.png",
           "16": "/img/ts_16.png"
      },
+     "sandbox": {
+       "pages": ["sandbox.html"]
+     },     
      "permissions": [
           "idle",
           {"socket" : ["tcp-connect:*:*", "udp-bind", "udp-send-to"]}

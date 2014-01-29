@@ -77,7 +77,7 @@ public class EchoServer {
      * @param args Options as follows:<ul>
      * 	<li><b>--tport &lt;tcp listen port&gt;</b>: Override the default TCP listening port. Default is 3333</li>
      *  <li><b>--uport &lt;udp listen port&gt;</b>: Override the default UDP listening port. Default is 3434</li>
-     * 	<li><b>--hex &lt;true|false&gt;</b>: Enables or disables the pipeline logging handler's hex mode</li>
+     * 	<li><b>--hex</b>: Enables the pipeline logging handler's hex mode</li>
      * </ul>
      * @throws Exception thrown on any startup error
      */
@@ -123,9 +123,9 @@ public class EchoServer {
     protected static void processArgs(String...args) {
     	if(args.length==0) return;
     	final int lastIndex = args.length-1;
-    	for(int i = 0; i < args.length; i++) {
-    		if(i==lastIndex) break;
+    	for(int i = 0; i < args.length; i++) {    		
     		if("--tport".equalsIgnoreCase(args[i])) {
+    			if(i==lastIndex) break;
     			i++; String port = args[i];
     			try {
     				int p = Integer.parseInt(port);
@@ -134,6 +134,7 @@ public class EchoServer {
     				log.error("Invalid tcp port:" + port);
     			}
     		} else if("--uport".equalsIgnoreCase(args[i])) {
+    			if(i==lastIndex) break;
     			i++; String port = args[i];
     			try {
     				int p = Integer.parseInt(port);
@@ -142,8 +143,8 @@ public class EchoServer {
     				log.error("Invalid udp port:" + port);
     			}    			
     		} else if("--hex".equalsIgnoreCase(args[i])) {
-    			i++; String bool = args[i];
-    			hexMode = (bool.equalsIgnoreCase("true") || bool.equalsIgnoreCase("y"));
+    			hexMode = true;
+    			log.info("Hex mode is true. Prepare for lots of logging....");
     		}
     	}
     }
